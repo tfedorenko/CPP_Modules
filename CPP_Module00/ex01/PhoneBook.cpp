@@ -6,22 +6,22 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:30:49 by tfedoren          #+#    #+#             */
-/*   Updated: 2023/01/12 18:39:38 by tfedoren         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:00:19 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-void Phonebook::add_new_contact(Contact contact)
+void Phonebook::add_new_contact()
 {
-	if(contact.get_first_name().empty() || contact.get_last_name().empty() || contact.get_nickname().empty() || contact.get_phone_number().empty() || contact.get_darkest_secret().empty())
+	this->contact_arr[this->contact_index_].get_input(this->contact_index_);
+	if(contact_arr[this->contact_index_].get_first_name().empty() || contact_arr[this->contact_index_].get_last_name().empty() || contact_arr[this->contact_index_].get_nickname().empty() || contact_arr[this->contact_index_].get_phone_number().empty() || contact_arr[this->contact_index_].get_darkest_secret().empty())
 	{
 		std::cout << "Please create a contact and fill oll fields" <<  std::endl;
 		return;
 	}
-	this->contact_arr[this->contact_index_].get_input(this->contact_index_);
 	this->contact_index_++;
-	if(this->contact_index_ == 7)
+	if(this->contact_index_ == 8)
 		this->contact_index_ = 0;
 	std::cout<<"Contact sucsessfully added" <<std::endl;	
 }
@@ -32,7 +32,7 @@ void Phonebook::search_contact()
 	Contact contact;
 
 	std::cout <<"     INDEX|FIRST NAME| LAST NAME|  NICKNAME" << std::endl;
-	for (int i = 0; i<8; i++)
+	for (int i = 0; i < 8; i++)
 	{
 		if (contact_arr[i].get_index())
 		{

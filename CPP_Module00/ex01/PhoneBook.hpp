@@ -15,7 +15,7 @@ class Phonebook
 		{
 			contact_index_ = 0;
 		}
-		void add_new_contact(Contact contact);
+		void add_new_contact();
 		void search_contact();
 };
 

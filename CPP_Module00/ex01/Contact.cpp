@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:30:42 by tfedoren          #+#    #+#             */
-/*   Updated: 2023/01/13 13:13:21 by tfedoren         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:01:14 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ Contact::Contact() : first_name_(""), last_name_(""), nickname_(""), phone_numbe
 Contact::~Contact()
 {
 }
-
-
 
 void Contact::display_contact()
 {
@@ -54,11 +52,11 @@ void Contact::display_contact()
 void Contact::display_contact_line_by_line()
 {
 	std::cout << std::endl;
-	std::cout << "First name:\t" << this->first_name_ << std::endl;
-	std::cout << "Last name:\t" << this->last_name_ << std::endl;
-	std::cout << "Nickname:\t" << this->nickname_ << std::endl;
-	std::cout << "Phone number:\t" << this->phone_number_ << std::endl;
-	std::cout << "Darkest secret:\t" << this->darkest_secret_ << std::endl;
+	std::cout << "First name:\t" << first_name_ << std::endl;
+	std::cout << "Last name:\t" << last_name_ << std::endl;
+	std::cout << "Nickname:\t" << nickname_ << std::endl;
+	std::cout << "Phone number:\t" << phone_number_ << std::endl;
+	std::cout << "Darkest secret:\t" << darkest_secret_ << std::endl;
 }
 
 std::string Contact::get_first_name()
@@ -86,35 +84,9 @@ std::string Contact::get_darkest_secret()
 	return this->darkest_secret_ ;
 }
 
-void Contact::set_first_name(std::string input)
-{
-	this->first_name_ = input;
-}
-
-void Contact::set_last_name(std::string input)
-{
-	this->last_name_ = input;
-}
-
-void Contact::set_nickname(std::string input)
-{
-	this->nickname_ = input;
-}
-
-void Contact::set_phone_number(std::string input)
-{
-	this->phone_number_ = input;
-}
-
-void Contact::set_darkest_secret(std::string input)
-{
-	this->darkest_secret_ = input;
-}
-
-int Contact::get_input(int index)
+void Contact::get_input(int index)
 {
 	Contact contact;
-	std::string input;
 	
 	this->index = index + 1;
 	std::cout<<"Enter first name:" <<std::endl;
@@ -127,8 +99,4 @@ int Contact::get_input(int index)
 	getline(std::cin, this->phone_number_);
 	std::cout<<"Enter the darkest secret:" <<std::endl;
 	getline(std::cin, this->darkest_secret_);
-	
-	return (0);
 }
-
-//

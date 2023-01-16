@@ -6,7 +6,7 @@
 /*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:55:37 by tfedoren          #+#    #+#             */
-/*   Updated: 2023/01/13 13:08:23 by tfedoren         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:00:28 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,6 @@
 #include <iostream>
 
 
-
-void add_contact(Phonebook phonebook)
-{
-	Contact contact;
-
-	contact.
-}
 int main(int argc, char **argv)
 {
 	Phonebook Pbook;
