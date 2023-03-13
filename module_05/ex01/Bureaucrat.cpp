@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 19:48:46 by tfedoren          #+#    #+#             */
-/*   Updated: 2023/03/12 19:48:46 by tfedoren         ###   ########.fr       */
+/*   Updated: 2023/03/13 21:25:47 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,14 @@ void Bureaucrat::decreseGrade (){
         throw Bureaucrat::GradeTooLowException();
     }
     grade++;
+}
+void Bureaucrat::signForm(Form &form){
+    try{
+        form.beSigned(*this);
+        std::cout << this->getName() << " signed " << form.get_name() << std::endl;
+    }catch (std::exception &e){
+        std::cout << this->getName() << " can't sign " << form.get_name() << std::endl;
+    }
 }
 
 std::ostream& operator<<(std::ostream &stream, const Bureaucrat& f){

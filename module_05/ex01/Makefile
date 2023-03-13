@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+         #
+#    By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/12 21:04:44 by tfedoren          #+#    #+#              #
-#    Updated: 2023/03/12 21:04:44 by tfedoren         ###   ########.fr        #
+#    Updated: 2023/03/13 21:29:10 by tfedoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = main
 CC = c++
 CFLAGS =  -Wall -Werror -Wextra -std=c++98 -pedantic
 
-SRCS = Bureaucrat.cpp main.cpp
+SRCS = Form.cpp Bureaucrat.cpp main.cpp 
 
 all: $(NAME)
 

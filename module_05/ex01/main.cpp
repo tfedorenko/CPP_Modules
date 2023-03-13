@@ -3,40 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 20:07:37 by tfedoren          #+#    #+#             */
-/*   Updated: 2023/03/12 20:07:37 by tfedoren         ###   ########.fr       */
+/*   Updated: 2023/03/13 21:39:22 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(){
-    Bureaucrat Bob("Bob", 1);
+    Bureaucrat Bob("Bob", 30);
+    Form form("One very important form", 130, 700);
     try{
-        Bob.increaseGrade();
+        Bob.signForm(form);
     }
     catch(std::exception &e){
         std::cout <<e.what() << std::endl;
     }
-    std::cout << Bob << std::endl;
+    std::cout << form << std::endl;
 
-    Bureaucrat OOOO("OOOO", 149);
+    Bureaucrat Mark("Mark", 140);
     try{
-        OOOO.decreseGrade();
+        Mark.signForm(form);;
     }
     catch(std::exception &e){
         std::cout <<e.what() << std::endl;
     }
-    std::cout << OOOO << std::endl;
-
-        Bureaucrat UUU("UUU", 150);
-    try{
-        UUU.decreseGrade();
-    }
-    catch(std::exception &e){
-        std::cout <<e.what() << std::endl;
-    }
-    std::cout << UUU << std::endl;
 }

@@ -3,24 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfedoren <tfedoren@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: tfedoren <tfedoren@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 20:07:37 by tfedoren          #+#    #+#             */
-/*   Updated: 2023/03/12 20:07:37 by tfedoren         ###   ########.fr       */
+/*   Updated: 2023/03/13 21:36:40 by tfedoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
 int main(){
-    Bureaucrat Bob("Bob", 1);
+    
     try{
+        Bureaucrat Bob("Bob", 12334);
         Bob.increaseGrade();
+        std::cout << Bob << std::endl;
     }
     catch(std::exception &e){
         std::cout <<e.what() << std::endl;
     }
-    std::cout << Bob << std::endl;
+    
 
     Bureaucrat OOOO("OOOO", 149);
     try{
@@ -31,7 +33,7 @@ int main(){
     }
     std::cout << OOOO << std::endl;
 
-        Bureaucrat UUU("UUU", 150);
+    Bureaucrat UUU("UUU", 150);
     try{
         UUU.decreseGrade();
     }
